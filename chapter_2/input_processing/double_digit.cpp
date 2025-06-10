@@ -11,5 +11,4 @@ int doubleDigitValue(int digit) {
 }
 
 int main() {
-    doubleDigitValue();
 }
