@@ -18,13 +18,25 @@ int main() {
     // overallNumber += (digitChar - '0');
     // cout << "That number as an integer: " << overallNumber << "\n";
 
-    cout << "Enter a number with as many digits as you like: ";
-    char digtiChar = cin.get();
-    int number = (digtiChar - '0');
-    digtiChar = cin.get();
-    while (digtiChar != 10) {
-        number = number * 10 + (digtiChar - '0');
-        digtiChar = cin.get();
-    }
-    cout << "Number entered: " << number << "\n";
+    // cout << "Enter a number with as many digits as you like: ";
+    // char digtiChar = cin.get();
+    // int number = (digtiChar - '0');
+    // digtiChar = cin.get();
+    // while (digtiChar != 10) {
+    //     number = number * 10 + (digtiChar - '0');
+    //     digtiChar = cin.get();
+    // }
+    // cout << "Number entered: " << number << "\n";
+
+    char digitChar;
+    do {
+        digitChar = cin.get();
+        int number = (digitChar - '0');
+        digitChar = cin.get();
+        while ((digitChar != 10) && (digitChar != ',')) {
+            number = number * 10 + (digitChar - '0');
+            digitChar = cin.get();
+        }
+        cout << "Number entered: " << number << "\n";
+    } while (digitChar != 10);
 }
