@@ -19,7 +19,12 @@ int main() {
         digit = cin.get();
         position++;
     }
-    remainder = checksum % 10;
-    checkdigit = 10 - remainder;
-    cout << "Check digit is " << checkdigit << "\n";
+    if ((position - 1) == 12) {
+        remainder = checksum % 10;
+        checkdigit = 10 - remainder;
+        cout << "Check digit is " << checkdigit << "\n";
+    } else {
+        cout << "You entered a number with " << (position - 1) << " numbers. Please enter the first twelve digits of a 13-digit ISBN number.\n";
+        return 0;
+    }
 }
